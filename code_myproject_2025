@@ -1,4 +1,12 @@
+'''
+This is the code which I used for my sister and my project, for states where we won first place, allowing us to transition on to globals. 
+- I am planning to change this code, to make it better for globals though. 
 
+Currently this controls 2 window motors to pull a quarter circle holding half an arch. The window motor, controlled by the a key pulls it onto the scaffold, leaving the arch behind. The other window motor does the same thing. Leaving an arch behind.
+- If you want to see a video of how it works, you can check my instagram account. the video will be uploaded soon. 
+
+Additionally this is my last DI year.
+'''
 
 
 '''
