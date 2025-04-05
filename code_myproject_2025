@@ -1,0 +1,105 @@
+
+
+
+'''
+important to remmember:
+- nano (file)
+	- this lets you code
+- ls
+	- lets you know all the files
+- python (file)
+	- lets you run the file
+'''
+
+from threading import Thread
+import sys
+import smbus
+import RPi.GPIO as GPIO
+
+
+I2C_ADR = 0x11
+# I2C_ADR = 0x10
+I2C_BUS = 1
+bus = smbus.SMBus(I2C_BUS)
+
+
+def bothForward():
+	# TODO: this has to have two of the realys open but for the forward
+	bus.write_byte_data(I2C_ADR, 1, 0xFF)
+	bus.write_byte_data(I2C_ADR, 2, 0x00)
+	bus.write_byte_data(I2C_ADR, 3, 0x00)
+	bus.write_byte_data(I2C_ADR, 4, 0xFF)
+
+def bothBackward():
+	#TODO: this one also needs two of the relays open but for the backward
+	bus.write_byte_data(I2C_ADR, 1, 0x00)
+	bus.write_byte_data(I2C_ADR, 2, 0xFF)
+	bus.write_byte_data(I2C_ADR, 3, 0xFF)
+	bus.write_byte_data(I2C_ADR, 4, 0x00)
+
+def leftForward():
+	bus.write_byte_data(I2C_ADR, 1, 0x00)
+	bus.write_byte_data(I2C_ADR, 2, 0x00)
+	bus.write_byte_data(I2C_ADR, 3, 0x00)
+	bus.write_byte_data(I2C_ADR, 4, 0xFF)
+
+def rightForward():
+	bus.write_byte_data(I2C_ADR, 1, 0xFF)
+	bus.write_byte_data(I2C_ADR, 2, 0x00)
+	bus.write_byte_data(I2C_ADR, 3, 0x00)
+	bus.write_byte_data(I2C_ADR, 4, 0x00)
+
+def leftBackward():
+	bus.write_byte_data(I2C_ADR, 1, 0x00)
+	bus.write_byte_data(I2C_ADR, 2, 0x00)
+	bus.write_byte_data(I2C_ADR, 3, 0xFF)
+	bus.write_byte_data(I2C_ADR, 4, 0x00)
+
+def rightBackward():
+	bus.write_byte_data(I2C_ADR, 1, 0x00)
+	bus.write_byte_data(I2C_ADR, 2, 0xFF)
+	bus.write_byte_data(I2C_ADR, 3, 0x00)
+	bus.write_byte_data(I2C_ADR, 4, 0x00)
+
+def bothStop():
+	bus.write_byte_data(I2C_ADR, 1, 0x00)
+	bus.write_byte_data(I2C_ADR, 2, 0x00)
+	bus.write_byte_data(I2C_ADR, 3, 0x00)
+	bus.write_byte_data(I2C_ADR, 4, 0x00)
+
+
+while True:
+	try:
+		option = input()
+
+		if option == 'a':
+			bothForward()
+			print("both forward")
+
+		elif option == 'd':
+			bothBackward()
+			print("both backward")
+
+		elif option == 's':
+			bothStop()
+			print("both stop")
+
+		elif option == 'r':
+			rightForward()
+			print("right forward")
+
+		elif option == 't':
+			rightBackward()
+			print("right backward")
+
+		elif option == 'l':
+			leftForward()
+			print("left foward")
+
+		elif option == 'k':
+			leftBackward()
+			print("left backward")
+
+	except KeyboardInterrupt as e:
+		print("Interrupted")
+		sys.exit()
