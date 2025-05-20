@@ -1,3 +1,7 @@
+'''
+This code is just the outline for when you want to use i2c
+'''
+
 import time
 import smbus
 import sys
