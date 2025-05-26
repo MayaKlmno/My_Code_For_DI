@@ -1,4 +1,7 @@
 '''
+This code is for a robot I created with my friend for our 2025 Globals. One team member crotcheted the body of a peanut, and I coded and wired.
+This robot changes facial expressions from evil, to concerned while moving his arms. 
+	Essentially, we created a toy, crotcheted, robot in the shape of a peanut. 
 '''
 from threading import Thread
 import time
