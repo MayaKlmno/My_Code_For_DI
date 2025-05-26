@@ -11,7 +11,7 @@ The third year, my code is under the name:
   Here I was in 10th grade (2024), in regionals we won (1st place, a renissance, and a devinci), states (1st and a renissance), and lastly globals we won 1st place as well as a renisance award. 
 
 The fouth year I have done 4 different coded projects under the names: 
-  Here I was in 11th grade (2025), in regionals we won (1st place, and a high IC), states (1st and a High IC),
+  Here I was in 11th grade (2025), in regionals we won (1st place, and a high IC), states (1st and a High IC), Globals (1st place and High IC).
 
 
-If you want to see how the devices look overall, check my instagram/youtube which is linked to my profile. If it is not posted yet, it will soon :)
+If you want to see how the devices look overall, check my instagram/youtube which is linked to my profile. If it is not posted yet, it will be soon :)
