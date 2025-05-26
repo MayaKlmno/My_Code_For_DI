@@ -1,6 +1,9 @@
 """
 this code makes a car move. The car uses 2 window motors, and a raspberry pi.
- (right now the relays for the second relays dont work)
+I used this code for my 2025 Destination Imagination
+
+ Things:
+ 	- to check the location of the relays type: i2cdetect -y 1    into the terminal. This gives the addreses for the relays being used. 
 """
 
 import time
@@ -12,7 +15,7 @@ from time import sleep
 I2C_BUS = 1
 I2C_BUS2 = 1
 I2C_ADR = 0x10
-I2C_ADR2 = 0x11
+I2C_ADR2 = 0x12
 
 bus = smbus.SMBus(I2C_BUS)
 bus2 = smbus.SMBus(I2C_BUS2)
