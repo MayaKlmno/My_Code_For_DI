@@ -1,5 +1,6 @@
 '''
 This code is just the outline for when you want to use i2c
+- to see the location of the relays you can type in: (i2cdetect -y 1) into the terminal to see the locations.
 '''
 
 import time
