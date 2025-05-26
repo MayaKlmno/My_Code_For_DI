@@ -3,6 +3,8 @@ This is my code for my last year of Destination Imagination.
 My sister and I created this project (I coded it). This device assembles an arch by itself, using window motors, electro magnets, magnets, raspberry pi, and more. 
 If you want to see how it works, check my instagram account where a video will be uploaded soon.
 This is the final draft, and what we used for our Globals Competition
+
+	- GLOBALS: we won First Place with a High Instant Challenge award
 '''
 from threading import Thread
 import sys
